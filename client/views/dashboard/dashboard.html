@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>International country information</title>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div id="dashboardContainer" ng-controller="dashboardCtrl">
+        <h1 class="page-header">International country information</h1>
+        <div id="tagDiv">
+            <tags-input ng-model="tags" display-property="name" placeholder="Add a country" replace-spaces-with-dashes="false">
+                <auto-complete source="loadTags($query)" min-length="0" load-on-focus="true" load-on-empty="true" max-results-to-show="32" template="my-custom-template">
+                </auto-complete>
+            </tags-input>
+        </div>
+
+        <div id="wrapper" ng-repeat="countryCode in tags">
+            <country-summary country-code="countryCode.iso2Code"></country-summary>
+        </div>
+
+
+        <script type="text/ng-template" id="my-custom-template">
+            <div class="left-panel">
+                <img ng-src="http://mbenford.github.io/ngTagsInput/images/flags/{{data.flag}}" />
+            </div>
+            <div class="right-panel">
+                <span>{{data.name}}</span>
+            </div>
+        </script>
+
+    </div>
+</body>
+
+</html>

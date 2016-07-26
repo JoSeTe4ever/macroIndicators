@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" ng-app="macroIndicatorsApp">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- CSS libraries imports -->
+  <link rel="stylesheet" href="/css/libraries/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/libraries/bootstrap/bootstrap-theme.min.css">
+
+  <link href="/css/libraries/metisMenu/metisMenu.min.css" rel="stylesheet">
+  <link href="/css/libraries/startbootstrap-sb-admin-2/timeline.css" rel="stylesheet">
+  <link href="/css/libraries/startbootstrap-sb-admin-2/sb-admin-2.css" rel="stylesheet">
+  <link href="/css/libraries/morrisjs/morris.css" rel="stylesheet">
+  <link href="/css/libraries/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/libraries/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+  <link href="/css/libraries/tags/ng-tags-input.bootstrap.min.css" rel="stylesheet">
+  <link href="/css/libraries/tags/ng-tags-input.min.css" rel="stylesheet">
+      
+  <!--JS libraries imports -->
+  <script src="/js/libraries/jquery.min.js"></script>
+  <script src="/js/libraries/metisMenu/metisMenu.min.js"></script>
+  <script src="/js/libraries/bootstrap/bootstrap.min.js"></script>
+  <script src="/js/libraries/angular.min.js"></script>
+  <script src="/js/libraries/angular-translate.min.js"></script>
+  <script src="/js/libraries/startbootstrap-sb-admin-2/sb-admin-2.js"></script>
+  <script src="/js/libraries/tags/ng-tags-input.min.js"></script>
+  
+  <!--custom JS imports--> 
+  <script src="/js/controllers/mainCtrl.js"></script>
+  <script src="/js/controllers/dashboard/dashboardCtrl.js"></script>
+  
+  <!--External services import --> 
+  <script src="/angular_components/external_services.js"></script>
+  <script src="/angular_components/country_component/js/resource/worldBankResource.js"></script>
+  <script src="/angular_components/country_component/js/resource/worldBankResource.js"></script>
+  <script src="/angular_components/country_component/js/services/worldBankService.js"></script>
+    
+  <!-- begin components import -->
+  <script src="/angular_components/country_component/js/countriesData.js"></script>
+  <script src="/angular_components/angular_components.js"></script>
+  <script src="/angular_components/country_component/js/controllers/countryCtrl.js"></script>
+  <script src="/angular_components/country_component/js/country.js"></script>
+
+</head>
+
+<body>
+  <div ng-controller="mainCtrl">
+    <div ng-include="'/views/dashboard/dashboard.html'"></div>
+  </div>
+</body>
+</html>

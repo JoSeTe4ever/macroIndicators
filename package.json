@@ -1,0 +1,13 @@
+{
+  "name": "file-browser-example",
+  "version": "1.0.0",
+  "description": "This is a project to display some macroeconomic information.",
+  "main": "server.js",
+  "repository": "",
+  "author": "José Herminio Parreño Piqueras <josete4ever@gmail.com>",
+  "dependencies": {
+    "async": "~0.2.8",
+    "express": "~3.2.4",
+    "ng-tags-input": "^3.1.1"
+  }
+}

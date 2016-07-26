@@ -1,0 +1,57 @@
+<link href="/angular_components/country_component/css/country-component.css" rel="stylesheet">
+
+<div class="container countryGlance">
+    <div class="row">
+        <div class="col-lg-1">
+            <span class="{{iconClass}}"></span>
+        </div>
+        <div class="col-lg-6">
+            <h1 class="verticalCenter">{{countryName}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        
+    <dl class="dl-horizontal col-lg-6">
+        <dt>Government Type (FoG) </dt>
+        <dd>...</dd>
+        
+        <dt>Capital city </dt>
+        <dd>{{countryInfo.capitalCity}}</dd>
+
+        <dt>Income level </dt>
+        <dd>{{countryInfo.incomeLevel.value}}</dd>
+
+        <dt>Total Area {{lastLandArea}}</dt>
+        <dd>{{lastLandArea}}</dd>
+
+        <dt>Region </dt>
+        <dd>{{countryInfo.region.value}}</dd>
+
+        <dt>Language </dt>
+        <dd>...</dd>
+    </dl>
+    
+    
+    <dl class="dl-horizontal col-lg-6">
+        <dt>Population {{lastYearPopulation}} </dt>
+        <dd>{{lastYearPopulationValue}}</dd>
+        
+        <dt>GDP Growth {{lastYearGdpGrowth}} </dt>
+        <dd>{{lastYearGdpGrowthValue}}</dd>
+
+        <dt>Income level </dt>
+        <dd>{{countryInfo.incomeLevel.value}}</dd>
+
+        <dt>Total Area </dt>
+        <dd>...</dd>
+
+        <dt>Region </dt>
+        <dd>{{countryInfo.region.value}}</dd>
+
+        <dt>Language </dt>
+        <dd>...</dd>
+    </dl>
+    
+    </div>
+    
+</div>
