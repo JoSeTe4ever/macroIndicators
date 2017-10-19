@@ -16,7 +16,7 @@ https://datahelpdesk.worldbank.org/knowledgebase/topics/125589-developer-informa
 
     $ node server.js
 
-3) Open localhost:3030
+3) Open localhost:3000
 
 
 
