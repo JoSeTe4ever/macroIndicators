@@ -10,9 +10,9 @@ function countryCtrl($scope, $element, $attrs, $q, worldBankService) {
         var promises = [];
         var indicatorPromise1 = worldBankService.getIndicatorPerCountry('SP.POP.TOTL', countryCode, 'getpopulationdata');
         var indicatorPromise2 = worldBankService.getIndicatorPerCountry('NY.GDP.MKTP.KD.ZG', countryCode , "getgdpgrowthdata");
-        
+
         promises.push(indicatorPromise1);
-        
+
         $q.all(promises).then(function(data) {
             console.log("all promises are resolved.");
             fillScope(countryInfo);
@@ -49,14 +49,17 @@ function countryCtrl($scope, $element, $attrs, $q, worldBankService) {
         $scope.countryName = country.name;
         $scope.populationData = populationData;
         $scope.gdpgrowthdata = populationData;
-        
-        $scope.lastYearPopulationValue = populationData[0].value;
-        $scope.lastYearPopulation = gdpgrowthdata[0].date;
-        
+
+        if(populationData && populationData.length > 1){
+            $scope.lastYearPopulationValue = populationData[0].value;
+        }
+        if(gdpgrowthdata && gdpgrowthdata.length > 1){
+            $scope.lastYearPopulation = gdpgrowthdata[0].date;
+        }
     }
-    
-    
+
+
     function getLastElement(array, countryCode){
-        return array[0]; 
+        return array[0];
     }
 }

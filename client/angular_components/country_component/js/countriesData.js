@@ -267,7 +267,7 @@ var countryData = [];
 var populationData = [];
 var gdpgrowthdata = [];
 
-var getdata = function(data) {
+var Getdata = function(data) {
  if (data.length >= 1) countryData = data[1];
 }
 
